@@ -19,4 +19,9 @@ int AkkermanFunction(int m, int n)
     return AkkermanFunction(m, n);
 }
 
-Console.WriteLine(AkkermanFunction(3, 2));
+int[] parameters;
+
+Console.Write("Введите числа m и n для функции Аккермана через пробел: ");
+parameters = Console.ReadLine()!.Split(" ").Select(int.Parse).ToArray();
+
+Console.WriteLine(AkkermanFunction(parameters[0], parameters[1]));
